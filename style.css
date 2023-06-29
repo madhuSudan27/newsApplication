@@ -80,6 +80,10 @@ nav{
 .hover-link:active{
     color: #fbbebe;
 }
+
+.nav-item.active{
+    color: var(--accent-color);
+}
 .search-bar{
     height: 32px;
     gap: 8px;
