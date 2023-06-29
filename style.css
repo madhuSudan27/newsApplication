@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primart-text-color: #183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+    /* --padding-inline-section:20px; */
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--primart-text-color);
+}
+p{
+    font-family:'Roboto', sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.3rem;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+/* i want to give same height (so use this one) */
+.container{
+    max-width: 1180px;
+    margin-inline:auto;
+    overflow: hidden;
+}
+/* style the nav */
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left:0;
+    right:0;
+}
+.main-nav{
+    justify-content: space-between;
+    padding-block: 8px;
+}
+.company-logo{
+    /* width: 2px; */
+    /* height:6px; */
+}
+.company-logo img{
+    /* height: 30px; */
+    width: 70px;
+    border-radius: 50%;
+    height: 4px;
+    /* padding: 10px; */
+    height:70px;
+}
+.nav-links ul{
+    gap: 30px;
+}
+.hover-link{
+    cursor: pointer;
+}
+.hover-link:hover{
+    color: var(--secondary-text-color);
+    /* background-color: rgb(166, 197, 197);
+    padding: 10px;
+    border-radius: 10px; */
+}
+.hover-link:active{
+    color: #fbbebe;
+}
+.search-bar{
+    height: 32px;
+    gap: 8px;
+}
+
+
+/* change the form */
+.news-input{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    /* form item does not takes body font famiy so we have to define explicetly */
+    font-family:'Roboto', sans-serif;
+
+}
+.news-input:hover{
+    border-color: var(--accent-color);
+}
+.search-button{
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family:'Roboto', sans-serif;
+}
+.search-button:hover{
+    background-color: var(--accent-color-dark);
+}
+
+
+/* main */
+main{
+    padding-block: 20px;
+    margin-top: 100px;
+}
+.cards-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;  /* how this works*/
+    align-items: start;
+}
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff ;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    box-shadow:1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+
+.card-header img{
+    width: 100%;
+    height: 180px;
+    /* why cover */
+    object-fit: cover;
+}
+.card-content{
+    padding: 12px;
+}
+.news-source{
+    margin-block: 12px;
+}
